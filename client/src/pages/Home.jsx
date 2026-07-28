@@ -138,30 +138,7 @@ const Home = () => {
         <p style={{ marginBottom: "10px", opacity: 0.9 }}>Your Complete Learning Platform for Sindh Board</p>
         <p style={{ fontSize: "12px", opacity: 0.7 }}>Class 9-12 | Notes • Papers • Practice Questions</p>
         <p style={{ fontSize: "12px", opacity: 0.6, marginTop: "15px" }}>© 2026 Student Helper. All Rights Reserved.</p>
-        <button
-          onClick={() => navigate("/admin-login")}
-          style={{
-            marginTop: "15px",
-            padding: "8px 15px",
-            fontSize: "12px",
-            backgroundColor: "transparent",
-            color: "#667eea",
-            border: "1px solid #667eea",
-            borderRadius: "5px",
-            cursor: "pointer",
-            transition: "all 0.3s ease"
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.backgroundColor = "#667eea";
-            e.target.style.color = "white";
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "transparent";
-            e.target.style.color = "#667eea";
-          }}
-        >
-          Admin Login
-        </button>
+       
       </footer>
     </div>
   );
