@@ -14,7 +14,7 @@ const LatestNews = () => {
 
   const fetchNews = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/news");
+      const response = await axios.get("student-helper-production-c02d.up.railway.app/api/news");
       setNewsList(response.data);
       setLoading(false);
     } catch (error) {

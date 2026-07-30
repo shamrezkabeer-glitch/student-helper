@@ -138,7 +138,6 @@ const Home = () => {
         <p style={{ marginBottom: "10px", opacity: 0.9 }}>Your Complete Learning Platform for Sindh Board</p>
         <p style={{ fontSize: "12px", opacity: 0.7 }}>Class 9-12 | Notes • Papers • Practice Questions</p>
         <p style={{ fontSize: "12px", opacity: 0.6, marginTop: "15px" }}>© 2026 Student Helper. All Rights Reserved.</p>
-       
       </footer>
     </div>
   );

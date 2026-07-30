@@ -27,9 +27,9 @@ const Admin = () => {
 
   const fetchAllData = async () => {
     try {
-      const news = await axios.get("http://localhost:5000/api/news");
-      const papers = await axios.get("http://localhost:5000/api/papers");
-      const questions = await axios.get("http://localhost:5000/api/questions");
+      const news = await axios.get("student-helper-production-c02d.up.railway.app/api/news");
+      const papers = await axios.get("student-helper-production-c02d.up.railway.app/api/papers");
+      const questions = await axios.get("student-helper-production-c02d.up.railway.app/api/questions");
       
       setNewsList(news.data);
       setPapersList(papers.data);
@@ -45,7 +45,7 @@ const Admin = () => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/papers/upload", formData, {
+      const response = await axios.post("student-helper-production-c02d.up.railway.app/api/papers/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(`${type} upload ho gaya!`);
@@ -81,7 +81,7 @@ const Admin = () => {
     }
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/news", newsForm);
+      await axios.post("student-helper-production-c02d.up.railway.app/api/news", newsForm);
       alert("News add ho gaya!");
       setNewsForm({ class: "9", category: "Results", title: "", date: "", imageUrl: "" });
       fetchAllData();
@@ -103,7 +103,7 @@ const Admin = () => {
     }
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/news/${editingId}`, editForm);
+      await axios.put(`student-helper-production-c02d.up.railway.app/api/news/${editingId}`, editForm);
       alert("News update ho gaya!");
       setEditingId(null);
       setEditForm({});
@@ -117,7 +117,7 @@ const Admin = () => {
   const handleDeleteNews = async (id) => {
     if (window.confirm("Delete karna hai?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/news/${id}`);
+        await axios.delete(`student-helper-production-c02d.up.railway.app/api/news/${id}`);
         alert("News delete ho gaya!");
         fetchAllData();
       } catch (error) {
@@ -134,7 +134,7 @@ const Admin = () => {
     }
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/papers", papersForm);
+      await axios.post("student-helper-production-c02d.up.railway.app/api/papers", papersForm);
       alert("Paper add ho gaya!");
       setPapersForm({ class: "9", group: "", subject: "Computer", type: "Notes", fileUrl: "", title: "" });
       fetchAllData();
@@ -156,7 +156,7 @@ const Admin = () => {
     }
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/papers/${editingId}`, editForm);
+      await axios.put(`student-helper-production-c02d.up.railway.app/api/papers/${editingId}`, editForm);
       alert("Paper update ho gaya!");
       setEditingId(null);
       setEditForm({});
@@ -170,7 +170,7 @@ const Admin = () => {
   const handleDeletePapers = async (id) => {
     if (window.confirm("Delete karna hai?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/papers/${id}`);
+        await axios.delete(`student-helper-production-c02d.up.railway.app/api/papers/${id}`);
         alert("Paper delete ho gaya!");
         fetchAllData();
       } catch (error) {
@@ -187,7 +187,7 @@ const Admin = () => {
     }
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/questions", questionsForm);
+      await axios.post("student-helper-production-c02d.up.railway.app/api/questions", questionsForm);
       alert("Question add ho gaya!");
       setQuestionsForm({ class: "9", subject: "Physics", chapter: "Chapter 1", question: "", solution: "" });
       fetchAllData();
@@ -209,7 +209,7 @@ const Admin = () => {
     }
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/questions/${editingId}`, editForm);
+      await axios.put(`student-helper-production-c02d.up.railway.app/api/questions/${editingId}`, editForm);
       alert("Question update ho gaya!");
       setEditingId(null);
       setEditForm({});
@@ -223,7 +223,7 @@ const Admin = () => {
   const handleDeleteQuestions = async (id) => {
     if (window.confirm("Delete karna hai?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/questions/${id}`);
+        await axios.delete(`student-helper-production-c02d.up.railway.app/api/questions/${id}`);
         alert("Question delete ho gaya!");
         fetchAllData();
       } catch (error) {
