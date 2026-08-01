@@ -45,7 +45,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     formData.append("file", file);
 
     try {
-      const response = await axios.post("student-helper-production-c02d.up.railway.app/api/papers/upload", formData, {
+      const response = await axios.post("https://student-helper-production-c02d.up.railway.app/api/papers/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(`${type} upload ho gaya!`);
