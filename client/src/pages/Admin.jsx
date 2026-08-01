@@ -27,9 +27,9 @@ const Admin = () => {
 
   const fetchAllData = async () => {
     try {
-      const news = await axios.get("student-helper-production-c02d.up.railway.app/api/news");
-      const papers = await axios.get("student-helper-production-c02d.up.railway.app/api/papers");
-      const questions = await axios.get("student-helper-production-c02d.up.railway.app/api/questions");
+const news = await axios.get("https://student-helper-production-c02d.up.railway.app/api/news");
+const papers = await axios.get("https://student-helper-production-c02d.up.railway.app/api/papers");
+const questions = await axios.get("https://student-helper-production-c02d.up.railway.app/api/questions");
       
       setNewsList(news.data);
       setPapersList(papers.data);
