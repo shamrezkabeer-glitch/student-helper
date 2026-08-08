@@ -134,7 +134,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     }
     setLoading(true);
     try {
-      await axios.post("student-helper-production-c02d.up.railway.app/api/papers", papersForm);
+      await axios.post("https://student-helper-production-c02d.up.railway.app/api/papers", papersForm);
       alert("Paper add ho gaya!");
       setPapersForm({ class: "9", group: "", subject: "Computer", type: "Notes", fileUrl: "", title: "" });
       fetchAllData();
