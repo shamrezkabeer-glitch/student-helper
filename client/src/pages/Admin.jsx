@@ -81,7 +81,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     }
     setLoading(true);
     try {
-      await axios.post("student-helper-production-c02d.up.railway.app/api/news", newsForm);
+      await axios.post("https://student-helper-production-c02d.up.railway.app/api/news", newsForm);
       alert("News add ho gaya!");
       setNewsForm({ class: "9", category: "Results", title: "", date: "", imageUrl: "" });
       fetchAllData();
