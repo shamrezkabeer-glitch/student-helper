@@ -103,7 +103,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     }
     setLoading(true);
     try {
-      await axios.put(`student-helper-production-c02d.up.railway.app/api/news/${editingId}`, editForm);
+      await axios.put(`https://student-helper-production-c02d.up.railway.app/api/news/${editingId}`, editForm);
       alert("News update ho gaya!");
       setEditingId(null);
       setEditForm({});
@@ -156,7 +156,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     }
     setLoading(true);
     try {
-      await axios.put(`student-helper-production-c02d.up.railway.app/api/papers/${editingId}`, editForm);
+      await axios.put(`https://student-helper-production-c02d.up.railway.app/api/papers/${editingId}`, editForm);
       alert("Paper update ho gaya!");
       setEditingId(null);
       setEditForm({});
@@ -209,7 +209,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     }
     setLoading(true);
     try {
-      await axios.put(`student-helper-production-c02d.up.railway.app/api/questions/${editingId}`, editForm);
+      await axios.put(`https://student-helper-production-c02d.up.railway.app/api/questions/${editingId}`, editForm);
       alert("Question update ho gaya!");
       setEditingId(null);
       setEditForm({});
