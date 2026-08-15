@@ -100,6 +100,24 @@ const PapersWork = () => {
             <div key={idx} style={{ border: "1px solid #ddd", padding: "15px", margin: "10px auto", maxWidth: "500px", borderRadius: "5px" }}>
               <h3>{paper.title}</h3>
               <p>{paper.type}</p>
+              {paper.fileUrl && (
+                <a
+                  href={paper.fileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    marginTop: "10px",
+                    padding: "8px 15px",
+                    backgroundColor: "#007bff",
+                    color: "white",
+                    borderRadius: "5px",
+                    textDecoration: "none"
+                  }}
+                >
+                  📄 PDF Dekho
+                </a>
+              )}
             </div>
           ))}
         </div>
