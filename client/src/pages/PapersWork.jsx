@@ -34,7 +34,7 @@ const PapersWork = () => {
   const fetchPapers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("student-helper-production-c02d.up.railway.app/api/papers");
+      const response = await axios.get("https://student-helper-production-c02d.up.railway.app/api/papers");
       const filtered = response.data.filter(item => item.class === selectedClass && item.subject.toLowerCase().trim() === selectedSubject.toLowerCase());
       setPapers(filtered);
     } catch (error) {

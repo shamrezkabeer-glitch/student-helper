@@ -23,7 +23,7 @@ const Practice = () => {
   const fetchQuestions = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("student-helper-production-c02d.up.railway.app/api/questions");
+      const response = await axios.get("https://student-helper-production-c02d.up.railway.app/api/questions");
       const filtered = response.data.filter(item => 
         item.class === selectedClass && 
         item.subject === selectedSubject && 

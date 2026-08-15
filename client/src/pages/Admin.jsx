@@ -117,7 +117,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
   const handleDeleteNews = async (id) => {
     if (window.confirm("Delete karna hai?")) {
       try {
-        await axios.delete(`student-helper-production-c02d.up.railway.app/api/news/${id}`);
+        await axios.delete(`https://student-helper-production-c02d.up.railway.app/api/news/${id}`);
         alert("News delete ho gaya!");
         fetchAllData();
       } catch (error) {
@@ -170,7 +170,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
   const handleDeletePapers = async (id) => {
     if (window.confirm("Delete karna hai?")) {
       try {
-        await axios.delete(`student-helper-production-c02d.up.railway.app/api/papers/${id}`);
+        await axios.delete(`https://student-helper-production-c02d.up.railway.app/api/papers/${id}`);
         alert("Paper delete ho gaya!");
         fetchAllData();
       } catch (error) {
@@ -187,7 +187,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
     }
     setLoading(true);
     try {
-      await axios.post("student-helper-production-c02d.up.railway.app/api/questions", questionsForm);
+      await axios.post("https://student-helper-production-c02d.up.railway.app/api/questions", questionsForm);
       alert("Question add ho gaya!");
       setQuestionsForm({ class: "9", subject: "Physics", chapter: "Chapter 1", question: "", solution: "" });
       fetchAllData();
@@ -223,7 +223,7 @@ const questions = await axios.get("https://student-helper-production-c02d.up.rai
   const handleDeleteQuestions = async (id) => {
     if (window.confirm("Delete karna hai?")) {
       try {
-        await axios.delete(`student-helper-production-c02d.up.railway.app/api/questions/${id}`);
+        await axios.delete(`https://student-helper-production-c02d.up.railway.app/api/questions/${id}`);
         alert("Question delete ho gaya!");
         fetchAllData();
       } catch (error) {
